@@ -1,0 +1,17 @@
+sources:
+  line_continued_logs:
+    type: file
+    include: ["/etc/vector/*.log"]
+    multiline:
+      start_pattern: '\\$'
+      mode: continue_past
+      condition_pattern: '\\$'
+      timeout_ms: 1000
+
+sinks:
+  out:
+    inputs:
+      - "line_continued_logs"
+    type: console
+    encoding:
+      codec: json
