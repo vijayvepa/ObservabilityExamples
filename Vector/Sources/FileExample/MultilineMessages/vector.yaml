@@ -1,0 +1,17 @@
+sources:
+  ruby_logs:
+    type: file
+    include: ["/etc/vector/*.log"]
+    multiline:
+      start_pattern: '^[^\s]'
+      mode: continue_through
+      condition_pattern: '^[\s]+from'
+      timeout_ms: 1000
+
+sinks:
+  out:
+    inputs:
+      - "ruby_logs"
+    type: console
+    encoding:
+      codec: json
