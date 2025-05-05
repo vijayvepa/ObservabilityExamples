@@ -1,0 +1,1 @@
+- [Reference](https://vector.dev/docs/setup/quickstart/)
