@@ -1,0 +1,17 @@
+sources:
+  elasticsearch_logs:
+    type: file
+    include: ["/etc/vector/*.log"]
+    multiline:
+      start_pattern: '^\[[0-9]{4}-[0-9]{2}-[0-9]{2}'
+      mode: halt_before
+      condition_pattern: '^\[[0-9]{4}-[0-9]{2}-[0-9]{2}'
+      timeout_ms: 1000
+
+sinks:
+  out:
+    inputs:
+      - "elasticsearch_logs"
+    type: console
+    encoding:
+      codec: json
