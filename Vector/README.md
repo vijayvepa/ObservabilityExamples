@@ -1,1 +1,2 @@
-- [Reference](https://vector.dev/docs/setup/quickstart/)
+# Vector Pipelines
+- [Vector QuickStart](https://vector.dev/docs/setup/quickstart/)

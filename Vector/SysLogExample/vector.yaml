@@ -7,7 +7,7 @@ sources:
 transforms:
   remap_syslog:
     inputs:
-      "generate_syslog"
+      - "generate_syslog"
     type: "remap"
     source: |
       structured = parse_syslog!(.message)
