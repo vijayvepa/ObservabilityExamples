@@ -1,0 +1,28 @@
+sources:
+  generate_syslog:
+    type: "demo_logs"
+    format: "json"
+    count: 100
+  apache_access_log:
+    type: file
+    include: ["/etc/vector/*.log"]
+
+sinks:
+  out:
+    inputs:
+      - "apache_access_log"
+      - "generate_syslog"
+    type: console
+    encoding:
+      codec: json
+  http:
+    type: http
+    inputs:
+      - "apache_access_log"
+      - "generate_syslog"
+    uri: "http://proxy:8000/post"
+    encoding:
+      codec: json
+      
+
+      

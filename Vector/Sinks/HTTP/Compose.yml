@@ -1,0 +1,23 @@
+services:
+  vector:
+    depends_on:
+      - proxy
+    container_name: vector
+    image: timberio/vector:0.46.1-debian
+    entrypoint: ["vector", "-c", "/etc/vector/vector.yaml"]
+    volumes:
+      - ${PWD}:/etc/vector
+  httpbin:
+    container_name: httpbin
+    image: kennethreitz/httpbin
+    ports:
+      - "9191:80"
+  proxy:
+    image: lucascimon/nginx-logging-proxy
+    depends_on:
+      - httpbin
+    environment:
+      PROXIED_ENDPOINT: http://httpbin:80
+      LISTENING_PORT: 8000
+    ports:
+      - "8000:8000"
