@@ -1,0 +1,7 @@
+services:
+  vector:
+    container_name: vector
+    image: timberio/vector:0.46.1-debian
+    entrypoint: ["vector", "-c", "/etc/vector/vector.yaml"]
+    volumes:
+      - ${CURRENT_DIR}:/etc/vector
