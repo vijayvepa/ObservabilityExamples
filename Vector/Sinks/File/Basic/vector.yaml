@@ -1,0 +1,20 @@
+sources:
+  apache_access_log:
+    type: file
+    include: ["/etc/vector/*.log"]
+
+sinks:
+  out:
+    inputs:
+      - "apache_access_log"
+    type: console
+    encoding:
+      codec: json
+  file:
+    type: file
+    inputs: 
+      - "apache_access_log"
+    path: "/tmp/access-%Y-%m-%d.json"
+    encoding:
+      codec: json
+      
