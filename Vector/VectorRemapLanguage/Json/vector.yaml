@@ -1,0 +1,36 @@
+sources:
+  demo_logs:
+    type: demo_logs
+    format: json
+    encoding:
+      codec: json
+
+transforms: 
+  modify:
+    type: remap
+    inputs:
+    - "demo_logs"
+    source: |
+      . = parse_json!(string!(.message))
+      parsed_timestamp, err = parse_timestamp(.datetime, format:"%d/%M/%Y:%H:%M:%S0")
+
+      if err == null {
+        .timestamp = to_unix_timestamp(parsed_timestamp)
+      } else {
+        .timestamp = to_unix_timestamp(now())
+      }
+      #.timestamp_str = from_unix_timestamp(.datetime)
+      #Remove username field
+      del(.host)
+      # convert message to lowercase
+      .message = downcase(string!(.method))
+
+
+sinks:
+  out:
+    inputs:
+      - "modify"
+    type: console
+    encoding:
+      codec: json
+      
