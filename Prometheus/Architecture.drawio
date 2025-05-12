@@ -11,14 +11,18 @@
                     <mxGeometry x="210" y="50" width="460" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="41" style="edgeStyle=elbowEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;elbow=vertical;" edge="1" parent="1" source="13" target="21">
-                    <mxGeometry relative="1" as="geometry"/>
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="790" y="220"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="42" value="Push Alerts" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="41">
                     <mxGeometry x="-0.2636" y="2" relative="1" as="geometry">
                         <mxPoint x="1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="13" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="13" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FF3333;" vertex="1" parent="1">
                     <mxGeometry x="220" y="170" width="450" height="200" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -30,7 +34,7 @@
                 <mxCell id="4" value="Short-lived jobs" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="30" y="90" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="&lt;font style=&quot;color: rgb(204, 102, 0);&quot;&gt;&lt;b style=&quot;&quot;&gt;Pushgateway&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#CC6600;" vertex="1" parent="1">
+                <mxCell id="5" value="Pushgateway" style="rounded=0;whiteSpace=wrap;fontColor=#FF3333;labelBackgroundColor=none;html=1;fontStyle=1;strokeColor=#FF3333;" vertex="1" parent="1">
                     <mxGeometry x="40" y="230" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="6" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -60,10 +64,10 @@
                 <mxCell id="11" value="HTTP Server" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="530" y="240" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value="Prometheus Server" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#CC6600;fontStyle=1" vertex="1" parent="1">
+                <mxCell id="12" value="Prometheus Server" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF3333;fontStyle=1" vertex="1" parent="1">
                     <mxGeometry x="385" y="188" width="130" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="HDD/SDD" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="15" value="HDD/SDD" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;labelBackgroundColor=#1A1A1A;fillColor=#1A1A1A;" vertex="1" parent="1">
                     <mxGeometry x="405" y="390" width="90" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="16" value="Node" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
@@ -89,13 +93,13 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="21" value="Alertmanager" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="21" value="Alertmanager" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#FF3333;fontStyle=1;strokeColor=#FF3333;" vertex="1" parent="1">
                     <mxGeometry x="730" y="110" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="37" style="edgeStyle=elbowEdgeStyle;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="22" target="13">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="Prometheus Web UI" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="22" value="Prometheus Web UI" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FF3333;fontColor=#FF3333;fontStyle=1" vertex="1" parent="1">
                     <mxGeometry x="730" y="300" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="38" style="edgeStyle=elbowEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="23" target="13">
@@ -111,10 +115,10 @@
                     <mxGeometry x="730" y="440" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="25" value="pagerduty" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="900" y="100" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="920" y="80" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="26" value="email" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="900" y="173" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="920" y="150" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="27" style="edgeStyle=none;html=1;entryX=0.413;entryY=0.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4" target="5">
                     <mxGeometry relative="1" as="geometry"/>
