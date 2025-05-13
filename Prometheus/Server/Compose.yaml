@@ -1,0 +1,13 @@
+services:
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus
+    ports:
+      - "9000:9090"
+    volumes:
+      - ${PWD}/prometheus.yaml:/etc/prometheus/prometheus.yml
+  go-server:
+    container_name: go-server
+    image: vijayvepa/go-server
+    ports:
+    - "9001:8090"
