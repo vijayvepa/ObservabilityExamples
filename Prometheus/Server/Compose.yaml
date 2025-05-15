@@ -11,3 +11,8 @@ services:
     image: vijayvepa/go-server
     ports:
     - "9001:8090"
+  grafana:
+    container_name: grafana
+    image: grafana/grafana-oss
+    ports:
+    - "9002:3000"
