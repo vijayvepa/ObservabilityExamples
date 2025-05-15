@@ -1,0 +1,8 @@
+global:
+  resolve_timeout: 5m
+  # The root URL under which Prometheus is reachable.
+  route:
+    receiver: webhook_receiver
+    webhook_configs:
+      - url: 'http://webhook:8000/alert'
+        send_resolved: false

@@ -1,6 +1,24 @@
 # Prometheus Http Request Counter
 
-- [Reference](https://prometheus.io/docs/tutorials/instrumenting_http_server_in_go/)
+- [Instrumenting HTTP Server in Go](https://prometheus.io/docs/tutorials/instrumenting_http_server_in_go/)
+- [Visualizing Metrics with Grafana](https://prometheus.io/docs/tutorials/visualizing_metrics_using_grafana/)
+- [Alerting based on Metrics](https://prometheus.io/docs/tutorials/alerting_based_on_metrics/)
+
+## Deployed URLs
+
+- [Prometheus](http://localhost:9000)
+- [Sample Server](http://localhost:9001)
+- [Grafana](http://localhost:9002)
+- [Alert Manager](http://localhost:9003)
+- [Webhook](http://localhost:9004)
+- [Logging Proxy](http://localhost:9005)
+
+Endpoints
+- [Ping Endpoint](http://localhost:9001/ping)
+- [Metrics Endpoint](http://localhost:9002/metrics)
+- [Rules](http://localhost:9000/rules)
+- [Alerts](http://localhost:9000/alerts)
+
 
 ## Example Output
 
