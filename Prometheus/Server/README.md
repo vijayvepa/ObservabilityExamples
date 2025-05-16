@@ -4,6 +4,12 @@
 - [Visualizing Metrics with Grafana](https://prometheus.io/docs/tutorials/visualizing_metrics_using_grafana/)
 - [Alerting based on Metrics](https://prometheus.io/docs/tutorials/alerting_based_on_metrics/)
 
+## Generate Traffic
+
+```sh
+sh ApacheBenchmark.sh -n 100 http://host.docker.internal:9001/ping
+```
+
 ## Deployed URLs
 
 - [Prometheus](http://localhost:9000)
@@ -31,3 +37,16 @@ Endpoints
 - Grafana
 
 ![alt text](image-2.png)
+
+- Prometheus Rules
+
+
+- Alert Manager Alerts
+
+![alt text](image-3.png)
+
+- Prometheus Alerts
+![alt text](image-4.png)
+
+
+

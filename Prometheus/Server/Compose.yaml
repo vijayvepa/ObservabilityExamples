@@ -6,7 +6,7 @@ services:
       - "9000:9090"
     volumes:
       - ${PWD}/prometheus.yaml:/etc/prometheus/prometheus.yml
-      - ${PWD}/rules.yaml:/etc/prometheus/prometheus.yml
+      - ${PWD}/rules.yaml:/etc/prometheus/rules.yaml
   go-server:
     container_name: go-server
     image: vijayvepa/go-server
@@ -17,19 +17,22 @@ services:
     image: grafana/grafana-oss
     ports:
     - "9002:3000"
+    volumes:
+      - ${PWD}/grafana-data:/var/lib/grafana
   alertmanager:
     container_name: alertmanager
     image: prom/alertmanager
     ports:
       - "9003:9093"
     volumes:
-      - ${PWD}/alertmanager.yaml:/etc/alertmanager/config.yml 
+      - ${PWD}/alertmanager.yaml:/etc/alertmanager/alertmanager.yml 
   httpbin:
     container_name: httpbin
     image: kennethreitz/httpbin
     ports:
       - "9004:80"
   webhook:
+    container_name: webhook
     image: lucascimon/nginx-logging-proxy
     depends_on:
       - httpbin
