@@ -1,1 +1,0 @@
-docker run --name terraform --rm -i -t hashicorp/terraform:latest $@
